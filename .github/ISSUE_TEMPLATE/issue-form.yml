@@ -1,0 +1,38 @@
+name: "Issue Template"  # 템플릿 이름
+description: "새로운 이슈를 생성하는 템플릿입니다. 아래 필드들을 입력해주세요."
+
+labels: []  # 기본 라벨을 필요에 따라 설정
+
+body:
+  - type: "input"
+    id: ticketNum
+    attributes:
+      label: "Ticket Number"
+      description: "이슈를 추적하는 티켓 번호를 입력하세요."
+      placeholder: "예: OSP-123"
+    required: true
+
+  - type: "input"
+    id: branchName
+    attributes:
+      label: "Branch Name"
+      description: "작업한 영문 브랜치명을 입력하세요."
+      placeholder: "예: member-join"
+    required: true
+
+  - type: "textarea"
+    id: description
+    attributes:
+      label: "Issue Description"
+      description: "이슈에 대한 상세 내용을 입력하세요."
+      placeholder: "예: 회원가입기능"
+    required: true
+
+  - type: "checkbox"
+    id: tasks
+    attributes:
+      label: "Checklist"
+      description: "이슈와 관련된 확인 항목들을 체크하세요."
+      options:
+        - Task1
+      required: true
