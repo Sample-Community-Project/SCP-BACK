@@ -8,7 +8,8 @@ body:
       label: "Ticket Number"
       description: "이슈를 추적하는 티켓 번호를 입력하세요."
       placeholder: "예: OSP-123"
-    required: true
+    validations:
+      required: true
 
   - type: "input"
     id: branchName
@@ -16,7 +17,8 @@ body:
       label: "Branch Name"
       description: "작업한 영문 브랜치명을 입력하세요."
       placeholder: "예: member-join"
-    required: true
+    validations:
+      required: true
 
   - type: "textarea"
     id: description
@@ -24,7 +26,8 @@ body:
       label: "Issue Description"
       description: "이슈에 대한 상세 내용을 입력하세요."
       placeholder: "예: 회원가입기능"
-    required: true
+    validations:
+      required: true
 
   - type: "checkbox"
     id: tasks
@@ -33,4 +36,5 @@ body:
       description: "이슈와 관련된 확인 항목들을 체크하세요."
       options:
         - Task1
+    validations:
       required: true
