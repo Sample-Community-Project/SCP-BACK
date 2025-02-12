@@ -34,7 +34,8 @@ body:
     attributes:
       label: "Checklist"
       description: "이슈와 관련된 확인 항목들을 체크하세요."
-      options:
-        - Task1
+      value:
+        - [ ] Task1
+        - [ ] Task1
     validations:
       required: true
