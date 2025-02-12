@@ -2,7 +2,7 @@ name: "Issue Template"  # 템플릿 이름
 description: "새로운 이슈를 생성하는 템플릿입니다. 아래 필드들을 입력해주세요."
 labels: [feat]  # 기본 라벨을 필요에 따라 설정
 body:
-  - type: "input"
+  - type: input
     id: ticketNum
     attributes:
       label: "Ticket Number"
@@ -11,7 +11,7 @@ body:
     validations:
       required: true
 
-  - type: "input"
+  - type: input
     id: branchName
     attributes:
       label: "Branch Name"
@@ -20,7 +20,7 @@ body:
     validations:
       required: true
 
-  - type: "textarea"
+  - type: input
     id: description
     attributes:
       label: "Issue Description"
@@ -29,7 +29,7 @@ body:
     validations:
       required: true
 
-  - type: "checkbox"
+  - type: textarea
     id: tasks
     attributes:
       label: "Checklist"
