@@ -31,8 +31,6 @@ jobs:
 
       - name: Log Issue Parser
         run: |
-          echo '${{ steps.issue-parser.outputs.issueparser_ticketNum }}'
-          echo '${{ steps.issue-parser.outputs.__ticket_number }}'
           echo '${{ steps.issue-parser.outputs.jsonString }}'
 
       - name: Convert markdown to Jira Syntax
@@ -62,7 +60,7 @@ jobs:
             }
 
       - name: Log created issue
-        run: echo "Jira Issue ${{ steps.issue-parser.outputs.parentKey }}/${{ steps.create.outputs.issue }} was created"
+        run: echo "Jira Issue ${{ steps.issue-parser.outputs.ticketNum }}/${{ steps.create.outputs.issue }} was created"
 
       # 추후 개발브랜치 사용시 develop 브렌치로 checkout 필요
       # - name: Checkout develop code
@@ -73,7 +71,7 @@ jobs:
       - name: Create branch with Ticket number
         run: |
           ISSUE_NUMBER="${{ steps.create.outputs.issue }}"
-          ISSUE_TITLE="${{ steps.issue-parser.outputs.issueparser_branch}}"
+          ISSUE_TITLE="${{ steps.issue-parser.outputs.issueparser_branchName}}"
           BRANCH_NAME="${ISSUE_NUMBER}-$(echo ${ISSUE_TITLE} | sed 's/ /-/g')"
           git checkout -b "${BRANCH_NAME}"
           git push origin "${BRANCH_NAME}"
