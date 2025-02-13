@@ -1,4 +1,4 @@
-name: "Issue Template"  # 템플릿 이름
+name: "✅ 이슈 생성 템플릿"  # 템플릿 이름
 description: "새로운 이슈를 생성하는 템플릿입니다. 아래 필드들을 입력해주세요."
 labels: [feat]  # 기본 라벨을 필요에 따라 설정
 body:
