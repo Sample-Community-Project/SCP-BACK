@@ -54,7 +54,6 @@ jobs:
           description: |
             ${{ steps.md2jira.outputs.output-text }}
 
-            **비고 (Notes):**
             ${{ github.event.issue.body.notes }}
           fields: |
             {
