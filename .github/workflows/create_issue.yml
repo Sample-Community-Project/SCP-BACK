@@ -51,7 +51,11 @@ jobs:
           project: SCP
           issuetype: Sub-task
           summary: '${{ github.event.issue.title }}'
-          description: '${{ steps.md2jira.outputs.output-text }}'
+          description: |
+            ${{ steps.md2jira.outputs.output-text }}
+
+            **비고 (Notes):**
+            ${{ github.event.issue.body.notes }}
           fields: |
             {
               "parent": {
